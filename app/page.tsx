@@ -170,6 +170,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">What I Offer</h2>
+          <p className="text-lg text-gray-600 mb-12">Comprehensive web development services tailored to your needs</p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">💻</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Web Development</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Modern, responsive websites and web applications built with React, Next.js, and the latest technologies.</p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Integration</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Smart AI-powered features and automation to enhance your applications and streamline workflows.</p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Custom Solutions</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Tailored business applications, dashboards, and management systems designed for your specific needs.</p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm p-8 hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">UI/UX Design</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Clean, modern interfaces with focus on user experience, accessibility, and visual appeal.</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <a href="/services" className="inline-flex items-center gap-2 text-gray-700 font-semibold hover:text-gray-900 transition-colors">
+              View All Services
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 relative">
         <div className="absolute top-40 left-10 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
