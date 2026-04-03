@@ -77,14 +77,14 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E8]">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       <Navbar />
     <main className="pt-24 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-4xl font-bold text-white mb-4">
           All Projects
         </h1>
-        <p className="text-lg text-gray-600 mb-16">
+        <p className="text-lg text-gray-300 mb-16">
           A showcase of my recent work and contributions
         </p>
 
@@ -92,17 +92,17 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
             >
-              <div className="h-56 bg-gradient-to-br from-[#C4E532]/20 to-[#a8c428]/20 flex items-center justify-center">
+              <div className="h-56 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center">
                 <span className="text-7xl">{project.emoji}</span>
               </div>
 
               <div className="p-8">
-                <h2 className="text-xl font-semibold text-gray-900 mb-3">
+                <h2 className="text-xl font-semibold text-white mb-3">
                   {project.title}
                 </h2>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -110,7 +110,7 @@ export default function ProjectsPage() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="inline-block px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30 m-1"
+                      className="inline-block px-3 py-1 bg-[#06B6D4]/20 text-gray-200 text-xs rounded-full border border-[#06B6D4]/30 m-1"
                     >
                       {tag}
                     </span>
@@ -122,7 +122,7 @@ export default function ProjectsPage() {
                     btn.disabled ? (
                       <span
                         key={btn.label}
-                        className="px-5 py-2.5 rounded-lg text-sm font-medium bg-gray-200 text-gray-400 cursor-not-allowed"
+                        className="px-5 py-2.5 rounded-lg text-sm font-medium bg-gray-700 text-gray-400 cursor-not-allowed"
                       >
                         {btn.label}
                       </span>
@@ -138,7 +138,7 @@ export default function ProjectsPage() {
                             ? "noopener noreferrer"
                             : undefined
                         }
-                        className="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#C4E532] text-gray-900 hover:bg-[#b5d42e] transition-colors"
+                        className="px-5 py-2.5 rounded-lg text-sm font-medium bg-[#06B6D4] text-white hover:bg-[#0891B2] transition-colors"
                       >
                         {btn.label}
                       </a>
@@ -154,7 +154,7 @@ export default function ProjectsPage() {
                             ? "noopener noreferrer"
                             : undefined
                         }
-                        className="px-5 py-2.5 rounded-lg text-sm font-medium border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors"
+                        className="px-5 py-2.5 rounded-lg text-sm font-medium border border-gray-600 text-gray-200 hover:border-gray-400 transition-colors"
                       >
                         {btn.label}
                       </a>
@@ -166,16 +166,16 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-white rounded-xl shadow-sm p-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="text-center mt-16 bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-12">
+          <h2 className="text-2xl font-bold text-white mb-4">
             Have a Project in Mind?
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-300 mb-6">
             I&apos;m always open to discussing new projects and creative ideas.
           </p>
           <Link
             href="/#contact"
-            className="inline-block px-8 py-3 rounded-lg text-sm font-medium bg-[#C4E532] text-gray-900 hover:bg-[#b5d42e] transition-colors"
+            className="inline-block px-8 py-3 rounded-lg text-sm font-medium bg-[#06B6D4] text-white hover:bg-[#0891B2] transition-colors"
           >
             Let&apos;s Talk &rarr;
           </Link>

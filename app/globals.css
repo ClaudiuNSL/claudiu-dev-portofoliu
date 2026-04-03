@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F5F0E8;
-  --foreground: #1a1a1a;
-  --accent: #C4E532;
-  --accent-dark: #a8c428;
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --accent: #06B6D4;
+  --accent-dark: #0891B2;
 }
 
 @theme inline {
@@ -86,7 +86,7 @@ body {
 
 .bg-grid-pattern {
   background-image:
-    linear-gradient(to right, rgba(26, 26, 26, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26, 26, 26, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }

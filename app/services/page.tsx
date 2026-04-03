@@ -71,12 +71,12 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-[#F5F0E8]">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       <Navbar />
     <section className="pt-24 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">My Services</h1>
-        <p className="text-lg text-gray-600 mb-16">
+        <h1 className="text-4xl font-bold text-white mb-4">My Services</h1>
+        <p className="text-lg text-gray-300 mb-16">
           Comprehensive web development solutions for your business
         </p>
 
@@ -84,29 +84,29 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white rounded-xl shadow-sm p-10"
+              className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-10"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-2xl font-semibold text-white mb-4">
                 {service.title}
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>
-              <p className="text-sm font-semibold text-gray-900 mb-3">
+              <p className="text-sm font-semibold text-white mb-3">
                 What&apos;s included
               </p>
               <ul className="space-y-2 mb-6">
                 {service.includes.map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <span className="text-[#C4E532]">{"\u2713"}</span>
-                    <span className="text-gray-600 text-sm">{item}</span>
+                    <span className="text-[#06B6D4]">{"\u2713"}</span>
+                    <span className="text-gray-300 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
               <a
                 href="/#contact"
-                className="inline-block bg-[#C4E532] text-gray-900 font-semibold px-6 py-3 rounded-full hover:brightness-110 transition"
+                className="inline-block bg-[#06B6D4] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#0891B2] transition"
               >
                 Get Started
               </a>
@@ -114,16 +114,16 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-white rounded-xl shadow-sm p-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="text-center mt-16 bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-12">
+          <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Start Your Project?
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-300 mb-6">
             Let&apos;s discuss your ideas and bring them to life.
           </p>
           <a
             href="/#contact"
-            className="inline-block bg-[#C4E532] text-gray-900 font-semibold px-8 py-3 rounded-full hover:brightness-110 transition"
+            className="inline-block bg-[#06B6D4] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0891B2] transition"
           >
             Get in Touch &rarr;
           </a>
