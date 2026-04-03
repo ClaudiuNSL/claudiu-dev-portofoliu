@@ -379,138 +379,149 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-gray-900/50 backdrop-blur-sm relative">
-        <div className="absolute top-20 left-10 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl"></div>
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-4">Let's Work Together</h2>
-          <p className="text-xl text-gray-300 mb-12">Have a project in mind? Let's discuss how I can bring it to life!</p>
+      <section id="contact" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Let&apos;s Work Together</h2>
+          <p className="text-lg text-gray-600 mb-12">Have a project in mind? Let&apos;s discuss how I can bring it to life!</p>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-yellow-500/20">
-              <h3 className="text-2xl font-semibold text-yellow-400 mb-6">Send a Message</h3>
-              
-              <form 
-                className="space-y-6" 
-                action="https://formspree.io/f/xkovzrpr" 
+            <div className="bg-white rounded-xl shadow-sm p-8">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send a Message</h3>
+
+              <form
+                className="space-y-6"
+                action="https://formspree.io/f/xkovzrpr"
                 method="POST"
               >
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                    <input 
-                      type="text" 
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input
+                      type="text"
                       name="name"
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-yellow-500/30 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors text-white placeholder-gray-500"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#C4E532] focus:ring-1 focus:ring-[#C4E532] transition-colors text-gray-900 placeholder-gray-400"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                    <input 
-                      type="email" 
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input
+                      type="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-yellow-500/30 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors text-white placeholder-gray-500"
+                      className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#C4E532] focus:ring-1 focus:ring-[#C4E532] transition-colors text-gray-900 placeholder-gray-400"
                       placeholder="email@example.com"
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-                  <input 
-                    type="text" 
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                  <input
+                    type="text"
                     name="subject"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-yellow-500/30 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors text-white placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#C4E532] focus:ring-1 focus:ring-[#C4E532] transition-colors text-gray-900 placeholder-gray-400"
                     placeholder="What do you want to discuss?"
                   />
                 </div>
-                
+
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                  <textarea 
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea
                     rows={5}
                     name="message"
                     required
-                    className="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-yellow-500/30 focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-colors resize-none text-white placeholder-gray-500"
+                    className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-[#C4E532] focus:ring-1 focus:ring-[#C4E532] transition-colors resize-none text-gray-900 placeholder-gray-400"
                     placeholder="Tell me more about your project..."
                   ></textarea>
                 </div>
-                
-                <button 
+
+                <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-8 py-4 rounded-lg font-semibold transition-all shadow-lg shadow-yellow-500/30"
+                  className="w-full bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors"
                 >
                   Send Message
                 </button>
               </form>
-              
-              <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg">
-                <p className="text-sm text-gray-300 text-center">
+
+              <div className="mt-6 text-center">
+                <p className="text-sm text-gray-500">
                   Or email me directly at{' '}
-                  <a href="mailto:claudiucomsa29@gmail.com" className="font-semibold text-yellow-400 hover:text-yellow-300">
+                  <a href="mailto:claudiucomsa29@gmail.com" className="font-semibold text-gray-900 hover:text-[#a8c428] transition-colors">
                     claudiucomsa29@gmail.com
                   </a>
                 </p>
               </div>
             </div>
 
-            {/* Contact Info */}
+            {/* Contact Info + Map */}
             <div className="space-y-6">
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20">
-                <h3 className="font-semibold text-yellow-400 mb-2">Email</h3>
-                <p className="text-gray-300 mb-3">claudiucomsa29@gmail.com</p>
-                <a 
+              <div className="bg-white rounded-xl shadow-sm p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600 mb-3">claudiucomsa29@gmail.com</p>
+                <a
                   href="mailto:claudiucomsa29@gmail.com"
-                  className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-4 py-2 rounded-lg text-sm transition-all font-semibold"
+                  className="inline-block bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
                 >
                   Send Email
                 </a>
               </div>
 
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20">
-                <h3 className="font-semibold text-yellow-400 mb-2">Phone</h3>
-                <p className="text-gray-300 mb-3">0761 880 406</p>
-                <a 
+              <div className="bg-white rounded-xl shadow-sm p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600 mb-3">0761 880 406</p>
+                <a
                   href="tel:+40761880406"
-                  className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-4 py-2 rounded-lg text-sm transition-all font-semibold"
+                  className="inline-block bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
                 >
                   Call Now
                 </a>
               </div>
 
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20">
-                <h3 className="font-semibold text-yellow-400 mb-2">Location</h3>
-                <p className="text-gray-300 mb-3">Constanța, Romania</p>
-                <span className="inline-block bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-lg text-sm border border-yellow-500/30">
+              <div className="bg-white rounded-xl shadow-sm p-6">
+                <h3 className="font-semibold text-gray-900 mb-2">Location</h3>
+                <p className="text-gray-600 mb-3">Constanța, Romania</p>
+                <span className="inline-block bg-[#C4E532]/20 text-gray-900 font-medium px-4 py-2 rounded-lg text-sm border border-[#C4E532]/40">
                   Available Remote
                 </span>
               </div>
 
-              <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-yellow-500/20">
-                <h3 className="font-semibold text-yellow-400 mb-4">Connect</h3>
+              <div className="bg-white rounded-xl shadow-sm p-6">
+                <h3 className="font-semibold text-gray-900 mb-4">Connect</h3>
                 <div className="flex gap-3">
-                  <a 
-                    href="https://github.com/ClaudiuNSL" 
+                  <a
+                    href="https://github.com/ClaudiuNSL"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-4 py-3 rounded-lg text-center transition-all font-semibold"
+                    className="flex-1 bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm text-center transition-colors"
                   >
                     GitHub
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/in/claudiu-comsa-72b552364/" 
+                  <a
+                    href="https://www.linkedin.com/in/claudiu-comsa-72b552364/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-4 py-3 rounded-lg text-center transition-all font-semibold"
+                    className="flex-1 bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm text-center transition-colors"
                   >
                     LinkedIn
                   </a>
                 </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89717.47034519996!2d28.5831228!3d44.1598013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40bae0ba0a462f71%3A0x5765bc591a20fdd6!2sConstan%C8%9Ba!5e0!3m2!1sen!2sro!4v1"
+                  width="100%"
+                  height="250"
+                  style={{border: 0}}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Location - Constanța, Romania"
+                />
               </div>
             </div>
           </div>
