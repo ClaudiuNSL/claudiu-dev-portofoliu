@@ -6,41 +6,35 @@ export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black">
-      {/* Animated Background */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
-        <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500/10 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-yellow-600/10 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
-        <div className="absolute inset-0 bg-grid-pattern-dark opacity-5"></div>
-      </div>
-
+    <div className="min-h-screen bg-[#F5F0E8]">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/50 backdrop-blur-xl z-50 border-b border-yellow-500/20 relative">
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex justify-between items-center py-4">
-            <a href="#home" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded flex items-center justify-center shadow-lg shadow-yellow-500/50">
-                <span className="text-black font-bold text-sm">C</span>
-              </div>
-              <span className="text-xl font-semibold text-white">Claudiu</span>
+            <a href="#home" className="flex items-center">
+              <span className="text-3xl font-bold tracking-tight">
+                <span className="text-[#C4E532]">C</span>
+                <span className="text-gray-900">C</span>
+              </span>
+              <span className="ml-2 text-sm text-gray-500 hidden sm:block">Comsa Claudiu</span>
             </a>
-            
+
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-gray-300 hover:text-yellow-400 transition-colors">About</a>
-              <a href="#projects" className="text-gray-300 hover:text-yellow-400 transition-colors">Projects</a>
-              <a href="#contact" className="text-gray-300 hover:text-yellow-400 transition-colors">Contact</a>
-              <a 
-                href="#contact" 
-                className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-5 py-2 rounded-lg transition-all font-semibold shadow-lg shadow-yellow-500/30"
+              <a href="#home" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Home</a>
+              <a href="#about" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">About</a>
+              <a href="#services" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Services</a>
+              <a href="#projects" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Projects</a>
+              <a href="#contact" className="text-gray-600 hover:text-gray-900 font-medium transition-colors">Contact</a>
+              <a
+                href="#contact"
+                className="bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-6 py-2.5 rounded-full transition-colors"
               >
                 Get in Touch
               </a>
             </div>
 
-            <button 
-              className="md:hidden text-yellow-400"
+            <button
+              className="md:hidden text-gray-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,54 +45,67 @@ export default function Home() {
 
           {isMobileMenuOpen && (
             <div className="md:hidden pb-4 space-y-2">
-              <a href="#about" className="block text-gray-300 hover:text-yellow-400 px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-              <a href="#projects" className="block text-gray-300 hover:text-yellow-400 px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
-              <a href="#contact" className="block text-gray-300 hover:text-yellow-400 px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+              <a href="#home" className="block text-gray-600 hover:text-gray-900 font-medium px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
+              <a href="#about" className="block text-gray-600 hover:text-gray-900 font-medium px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>About</a>
+              <a href="#services" className="block text-gray-600 hover:text-gray-900 font-medium px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+              <a href="#projects" className="block text-gray-600 hover:text-gray-900 font-medium px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
+              <a href="#contact" className="block text-gray-600 hover:text-gray-900 font-medium px-4 py-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+              <a href="#contact" className="block bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-6 py-2.5 rounded-full text-center mx-4 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>Get in Touch</a>
             </div>
           )}
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 relative">
-        <div className="max-w-6xl mx-auto relative z-10">
+      <section id="home" className="min-h-screen flex items-center pt-20 px-6">
+        <div className="max-w-6xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-                Full-Stack Developer & 
-                <span className="block bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500 bg-clip-text text-transparent mt-2">
-                  AI Enthusiast
-                </span>
+              <span className="inline-block bg-[#C4E532]/20 text-gray-900 font-medium text-sm px-4 py-1.5 rounded-full mb-6 border border-[#C4E532]/40">
+                Web Developer & AI Enthusiast
+              </span>
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Building Digital Solutions That Drive Results
               </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                I build modern web applications with clean code and elegant design. 
-                Specialized in React, Next.js, and AI integration.
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                From innovative web applications to AI-powered solutions, I provide expert development to help your business grow, scale, and thrive.
               </p>
+              <div className="flex items-center gap-8 mb-8">
+                <div>
+                  <div className="text-3xl font-bold text-gray-900">50+</div>
+                  <div className="text-sm text-gray-500">Expert Solutions</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-gray-900">3+</div>
+                  <div className="text-sm text-gray-500">Years Experience</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-gray-900">100%</div>
+                  <div className="text-sm text-gray-500">Client Dedication</div>
+                </div>
+              </div>
               <div className="flex gap-4">
-                <a 
-                  href="#projects" 
-                  className="bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-6 py-3 rounded-lg transition-all font-semibold shadow-lg shadow-yellow-500/30"
+                <a
+                  href="#projects"
+                  className="bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-8 py-3 rounded-full transition-colors"
                 >
-                  View Projects
+                  View Projects &rarr;
                 </a>
-                <a 
-                  href="#contact" 
-                  className="border-2 border-yellow-500/50 hover:border-yellow-400 text-yellow-400 hover:text-yellow-300 px-6 py-3 rounded-lg transition-colors"
+                <a
+                  href="#contact"
+                  className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-3 rounded-full transition-colors"
                 >
-                  Contact Me
+                  Contact Me &rarr;
                 </a>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="aspect-square rounded-full overflow-hidden border-4 border-yellow-500/50 shadow-2xl shadow-yellow-500/20 relative z-10">
-                <img 
-                  src="/profil.jpg" 
-                  alt="Claudiu" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 blur-3xl opacity-20 animate-pulse"></div>
+
+            <div>
+              <img
+                src="/profil.jpg"
+                alt="Claudiu"
+                className="w-full h-auto rounded-2xl object-cover shadow-2xl"
+              />
             </div>
           </div>
         </div>
