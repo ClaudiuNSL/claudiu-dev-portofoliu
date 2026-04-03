@@ -112,98 +112,55 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-gray-900/50 backdrop-blur-sm relative">
-        <div className="absolute top-20 right-20 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 left-20 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl"></div>
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-12">About Me</h2>
-          
+      <section id="about" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12">About Me</h2>
+
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-yellow-500/20">
-                <h3 className="text-2xl font-semibold text-yellow-400 mb-4">My Story</h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  I'm a passionate web developer with experience in creating modern and innovative applications. 
+              <div className="bg-white p-8 rounded-xl shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">My Story</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  I'm a passionate web developer with experience in creating modern and innovative applications.
                   I love transforming ideas into reality using the latest technologies.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
-                  My specialization includes React, Next.js, TypeScript, and AI integration in web applications. 
+                <p className="text-gray-600 leading-relaxed">
+                  My specialization includes React, Next.js, TypeScript, and AI integration in web applications.
                   I'm always looking for new challenges and learning opportunities.
                 </p>
               </div>
 
-              <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-yellow-500/20">
-                <h3 className="text-2xl font-semibold text-yellow-400 mb-4">My Goals</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  To create web applications that not only work perfectly but also provide 
+              <div className="bg-white p-8 rounded-xl shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">My Goals</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To create web applications that not only work perfectly but also provide
                   memorable experiences for users. I believe in the power of technology to change the world for the better.
                 </p>
               </div>
             </div>
 
             <div className="space-y-8">
-              <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-yellow-500/20">
-                <h3 className="text-2xl font-semibold text-yellow-400 mb-6">Skills</h3>
-                
-                <div className="space-y-4">
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-white">React & Next.js</span>
-                      <span className="text-yellow-400">95%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style={{width: '95%'}}></div>
-                    </div>
-                  </div>
+              <div className="bg-white p-8 rounded-xl shadow-sm">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Skills</h3>
 
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-white">TypeScript</span>
-                      <span className="text-yellow-400">90%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style={{width: '90%'}}></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-white">Tailwind CSS</span>
-                      <span className="text-yellow-400">88%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style={{width: '88%'}}></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-white">AI Integration</span>
-                      <span className="text-yellow-400">85%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style={{width: '85%'}}></div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="flex justify-between mb-2">
-                      <span className="font-medium text-white">Node.js & APIs</span>
-                      <span className="text-yellow-400">82%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style={{width: '82%'}}></div>
-                    </div>
-                  </div>
+                <div className="flex flex-wrap">
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">React & Next.js</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">TypeScript</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">Tailwind CSS</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">AI Integration</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">Node.js & APIs</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">MongoDB</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">Git & GitHub</span>
+                  <span className="inline-block px-4 py-2 rounded-full border-2 border-[#C4E532] text-gray-700 text-sm font-medium m-1">UI/UX Design</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 text-black p-6 rounded-xl text-center">
+                <div className="bg-[#C4E532] text-gray-900 p-6 rounded-xl text-center">
                   <div className="text-3xl font-bold mb-1">50+</div>
                   <div className="text-sm font-semibold">Projects</div>
                 </div>
-                <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 text-black p-6 rounded-xl text-center">
+                <div className="bg-[#C4E532] text-gray-900 p-6 rounded-xl text-center">
                   <div className="text-3xl font-bold mb-1">3+</div>
                   <div className="text-sm font-semibold">Years</div>
                 </div>
