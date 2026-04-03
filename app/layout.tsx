@@ -13,8 +13,85 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Claudiu.dev | Full-Stack Developer & AI Enthusiast",
-  description: "Portofoliul lui Claudiu - dezvoltator full-stack specializat în React, Next.js și integrarea AI în aplicații web moderne",
+  title: {
+    template: "%s | Comsa Claudiu — Web Developer",
+    default: "Comsa Claudiu — Web Developer & Freelancer",
+  },
+  description:
+    "Programator web freelancer din Constanța, Romania. Web developer specializat în creare site-uri, aplicații web moderne cu React și Next.js. Creare site-uri Constanta.",
+  keywords: [
+    "programator web",
+    "web developer Romania",
+    "creare site-uri Constanta",
+    "dezvoltator web",
+    "freelancer Romania",
+    "React developer",
+    "Next.js developer",
+    "frontend developer",
+    "creare site-uri web",
+    "web design Constanta",
+    "Comsa Claudiu",
+  ],
+  openGraph: {
+    title: "Comsa Claudiu — Web Developer & Freelancer",
+    description:
+      "Programator web freelancer din Constanța, Romania. Specializat în creare site-uri și aplicații web moderne.",
+    url: "https://claudiu.dev",
+    siteName: "Comsa Claudiu",
+    locale: "ro_RO",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://claudiu.dev",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      name: "Comsa Claudiu",
+      jobTitle: "Web Developer",
+      url: "https://claudiu.dev",
+      email: "claudiucomsa29@gmail.com",
+      telephone: "+40761880406",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Constanța",
+        addressCountry: "Romania",
+      },
+      sameAs: [
+        "https://github.com/ClaudiuNSL",
+        "https://www.linkedin.com/in/claudiu-comsa-72b552364/",
+      ],
+    },
+    {
+      "@type": "LocalBusiness",
+      name: "Comsa Claudiu",
+      description:
+        "Web Developer & Freelancer specializat în creare site-uri și aplicații web moderne.",
+      url: "https://claudiu.dev",
+      email: "claudiucomsa29@gmail.com",
+      telephone: "+40761880406",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Constanța",
+        addressCountry: "Romania",
+      },
+      sameAs: [
+        "https://github.com/ClaudiuNSL",
+        "https://www.linkedin.com/in/claudiu-comsa-72b552364/",
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -23,10 +100,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ro">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
