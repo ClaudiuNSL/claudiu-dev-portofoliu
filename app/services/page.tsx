@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -69,6 +71,8 @@ const services = [
 
 export default function ServicesPage() {
   return (
+    <div className="min-h-screen bg-[#F5F0E8]">
+      <Navbar />
     <section className="pt-24 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">My Services</h1>
@@ -126,5 +130,7 @@ export default function ServicesPage() {
         </div>
       </div>
     </section>
+      <Footer />
+    </div>
   );
 }
