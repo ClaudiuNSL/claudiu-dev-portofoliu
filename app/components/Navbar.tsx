@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-white/50 backdrop-blur-xl z-50 border-b border-white/20">
+    <nav className="fixed top-0 w-full bg-white/5 backdrop-blur-md z-50 border-b border-white/20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex justify-between items-center py-4">
           <a href="#home" className="flex items-center">

@@ -84,7 +84,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-10"
+              className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-10"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
               <h2 className="text-2xl font-semibold text-white mb-4">
@@ -114,7 +114,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-12">
+        <div className="text-center mt-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-12">
           <h2 className="text-2xl font-bold text-white mb-4">
             Ready to Start Your Project?
           </h2>

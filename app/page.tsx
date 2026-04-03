@@ -68,7 +68,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">My Story</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   I'm a passionate web developer with experience in creating modern and innovative applications.
@@ -80,7 +80,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">My Goals</h3>
                 <p className="text-gray-300 leading-relaxed">
                   To create web applications that not only work perfectly but also provide
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Skills</h3>
 
                 <div className="flex flex-wrap">
@@ -127,25 +127,25 @@ export default function Home() {
           <p className="text-lg text-gray-300 mb-12">Comprehensive web development services tailored to your needs</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">💻</div>
               <h3 className="text-xl font-semibold text-white mb-3">Web Development</h3>
               <p className="text-gray-300 text-sm leading-relaxed">Modern, responsive websites and web applications built with React, Next.js, and the latest technologies.</p>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">AI Integration</h3>
               <p className="text-gray-300 text-sm leading-relaxed">Smart AI-powered features and automation to enhance your applications and streamline workflows.</p>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Custom Solutions</h3>
               <p className="text-gray-300 text-sm leading-relaxed">Tailored business applications, dashboards, and management systems designed for your specific needs.</p>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8 hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-xl font-semibold text-white mb-3">UI/UX Design</h3>
               <p className="text-gray-300 text-sm leading-relaxed">Clean, modern interfaces with focus on user experience, accessibility, and visual appeal.</p>
@@ -169,7 +169,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:shadow-md transition-shadow">
               <div className="h-48 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center">
                 <div className="text-6xl">🌐</div>
               </div>
@@ -208,7 +208,7 @@ export default function Home() {
             </div>
 
             {/* Project 2 */}
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:shadow-md transition-shadow">
               <div className="h-48 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center">
                 <div className="text-6xl">💼</div>
               </div>
@@ -242,7 +242,7 @@ export default function Home() {
             </div>
 
             {/* Project 3 */}
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:shadow-md transition-shadow">
               <div className="h-48 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center">
                 <div className="text-6xl">🚀</div>
               </div>
@@ -295,7 +295,7 @@ export default function Home() {
           <p className="text-lg text-gray-300 mb-12">Feedback from people I've worked with</p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
               <span className="text-[#06B6D4] text-5xl font-serif leading-none">&ldquo;</span>
               <p className="text-gray-300 mb-6 leading-relaxed italic">
                 Claudiu built an amazing website for my business. Professional, fast, and the design exceeded my expectations. Highly recommended!
@@ -305,7 +305,7 @@ export default function Home() {
               <div className="text-gray-400 text-sm">Business Owner</div>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
               <span className="text-[#06B6D4] text-5xl font-serif leading-none">&ldquo;</span>
               <p className="text-gray-300 mb-6 leading-relaxed italic">
                 Working with Claudiu was a great experience. He understood our vision perfectly and delivered a modern, responsive web application on time.
@@ -315,7 +315,7 @@ export default function Home() {
               <div className="text-gray-400 text-sm">Startup Founder</div>
             </div>
 
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
               <span className="text-[#06B6D4] text-5xl font-serif leading-none">&ldquo;</span>
               <p className="text-gray-300 mb-6 leading-relaxed italic">
                 Excellent work on our company website redesign. The attention to detail and clean code quality really sets Claudiu apart from other developers.
@@ -336,7 +336,7 @@ export default function Home() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-8">
+            <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
 
               <form
@@ -409,7 +409,7 @@ export default function Home() {
 
             {/* Contact Info + Map */}
             <div className="space-y-6">
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-6">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-6">
                 <h3 className="font-semibold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-3">claudiucomsa29@gmail.com</p>
                 <a
@@ -420,7 +420,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-6">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-6">
                 <h3 className="font-semibold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-3">0761 880 406</p>
                 <a
@@ -431,7 +431,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-6">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-6">
                 <h3 className="font-semibold text-white mb-2">Location</h3>
                 <p className="text-gray-300 mb-3">Constanța, Romania</p>
                 <span className="inline-block bg-[#06B6D4]/20 text-white font-medium px-4 py-2 rounded-lg text-sm border border-[#06B6D4]/40">
@@ -439,7 +439,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-6">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-6">
                 <h3 className="font-semibold text-white mb-4">Connect</h3>
                 <div className="flex gap-3">
                   <a
@@ -461,7 +461,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm overflow-hidden">
+              <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89717.47034519996!2d28.5831228!3d44.1598013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40bae0ba0a462f71%3A0x5765bc591a20fdd6!2sConstan%C8%9Ba!5e0!3m2!1sen!2sro!4v1"
                   width="100%"

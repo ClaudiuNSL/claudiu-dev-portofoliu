@@ -92,7 +92,7 @@ export default function ProjectsPage() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+              className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:shadow-md transition-shadow"
             >
               <div className="h-56 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center">
                 <span className="text-7xl">{project.emoji}</span>
@@ -166,7 +166,7 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        <div className="text-center mt-16 bg-white/60 backdrop-blur-xl rounded-xl border border-white/20 shadow-sm p-12">
+        <div className="text-center mt-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-12">
           <h2 className="text-2xl font-bold text-white mb-4">
             Have a Project in Mind?
           </h2>
