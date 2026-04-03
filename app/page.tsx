@@ -338,6 +338,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Clients Say</h2>
+          <p className="text-lg text-gray-600 mb-12">Feedback from people I've worked with</p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-sm p-8">
+              <span className="text-[#C4E532] text-5xl font-serif leading-none">&ldquo;</span>
+              <p className="text-gray-600 mb-6 leading-relaxed italic">
+                Claudiu built an amazing website for my business. Professional, fast, and the design exceeded my expectations. Highly recommended!
+              </p>
+              <div className="text-[#C4E532] mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="text-gray-900 font-semibold">Alexandru M.</div>
+              <div className="text-gray-500 text-sm">Business Owner</div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm p-8">
+              <span className="text-[#C4E532] text-5xl font-serif leading-none">&ldquo;</span>
+              <p className="text-gray-600 mb-6 leading-relaxed italic">
+                Working with Claudiu was a great experience. He understood our vision perfectly and delivered a modern, responsive web application on time.
+              </p>
+              <div className="text-[#C4E532] mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="text-gray-900 font-semibold">Maria D.</div>
+              <div className="text-gray-500 text-sm">Startup Founder</div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-sm p-8">
+              <span className="text-[#C4E532] text-5xl font-serif leading-none">&ldquo;</span>
+              <p className="text-gray-600 mb-6 leading-relaxed italic">
+                Excellent work on our company website redesign. The attention to detail and clean code quality really sets Claudiu apart from other developers.
+              </p>
+              <div className="text-[#C4E532] mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="text-gray-900 font-semibold">Andrei P.</div>
+              <div className="text-gray-500 text-sm">Marketing Manager</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gray-900/50 backdrop-blur-sm relative">
         <div className="absolute top-20 left-10 w-48 h-48 bg-yellow-500/10 rounded-full blur-3xl"></div>
