@@ -212,46 +212,44 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 relative">
-        <div className="absolute top-40 left-10 w-64 h-64 bg-yellow-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-10 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-4">Projects</h2>
-          <p className="text-xl text-gray-300 mb-12">Some of my recent work</p>
-          
+      <section id="projects" className="py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
+          <p className="text-lg text-gray-600 mb-12">Some of my recent work</p>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-yellow-500/20 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-all">
-              <div className="h-48 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#C4E532]/20 to-[#a8c428]/20 flex items-center justify-center">
                 <div className="text-6xl">🌐</div>
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Banciu Costin - Professional Website
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm">
+                <p className="text-gray-600 mb-4 text-sm">
                   Modern professional website with responsive design, optimized for performance and SEO.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">HTML5</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">CSS3</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">JavaScript</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">HTML5</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">CSS3</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">JavaScript</span>
                 </div>
                 <div className="flex gap-3">
-                  <a 
-                    href="https://www.banciucostin.ro" 
-                    target="_blank" 
+                  <a
+                    href="https://www.banciucostin.ro"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-4 py-2 rounded-lg text-sm text-center transition-all font-semibold"
+                    className="flex-1 bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm text-center transition-colors"
                   >
                     View Live
                   </a>
-                  <a 
-                    href="https://github.com/ClaudiuNSL" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/ClaudiuNSL"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-yellow-500/50 hover:border-yellow-400 text-yellow-400 rounded-lg text-sm transition-colors"
+                    className="px-4 py-2 border border-gray-300 hover:border-gray-400 text-gray-700 rounded-lg text-sm transition-colors"
                   >
                     GitHub
                   </a>
@@ -260,32 +258,32 @@ export default function Home() {
             </div>
 
             {/* Project 2 */}
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-yellow-500/20 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-all">
-              <div className="h-48 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#C4E532]/20 to-[#a8c428]/20 flex items-center justify-center">
                 <div className="text-6xl">💼</div>
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Interactive Portfolio
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm">
+                <p className="text-gray-600 mb-4 text-sm">
                   Modern personal portfolio with advanced animations and responsive design. Built with Next.js and Tailwind CSS.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Next.js</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Tailwind</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">TypeScript</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">Next.js</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">Tailwind</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">TypeScript</span>
                 </div>
                 <div className="flex gap-3">
-                  <button className="flex-1 bg-gray-700 text-gray-400 px-4 py-2 rounded-lg text-sm cursor-not-allowed">
+                  <button disabled className="flex-1 bg-gray-200 text-gray-400 px-4 py-2 rounded-lg text-sm cursor-not-allowed">
                     In Development
                   </button>
-                  <a 
-                    href="https://github.com/ClaudiuNSL" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/ClaudiuNSL"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-yellow-500/50 hover:border-yellow-400 text-yellow-400 rounded-lg text-sm transition-colors"
+                    className="px-4 py-2 border border-gray-300 hover:border-gray-400 text-gray-700 rounded-lg text-sm transition-colors"
                   >
                     GitHub
                   </a>
@@ -294,41 +292,48 @@ export default function Home() {
             </div>
 
             {/* Project 3 */}
-            <div className="bg-gray-800/50 backdrop-blur-sm border border-yellow-500/20 rounded-xl overflow-hidden hover:border-yellow-500/50 transition-all">
-              <div className="h-48 bg-gradient-to-br from-yellow-500/20 to-amber-500/20 flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#C4E532]/20 to-[#a8c428]/20 flex items-center justify-center">
                 <div className="text-6xl">🚀</div>
               </div>
-              
+
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Custom Web Solutions
                 </h3>
-                <p className="text-gray-400 mb-4 text-sm">
+                <p className="text-gray-600 mb-4 text-sm">
                   I develop custom web solutions for businesses: landing pages, web applications, and management systems.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">React</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Node.js</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">MongoDB</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">React</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">Node.js</span>
+                  <span className="px-3 py-1 bg-[#C4E532]/20 text-gray-700 text-xs rounded-full border border-[#C4E532]/30">MongoDB</span>
                 </div>
                 <div className="flex gap-3">
-                  <a 
+                  <a
                     href="#contact"
-                    className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-black px-4 py-2 rounded-lg text-sm text-center transition-all font-semibold"
+                    className="flex-1 bg-[#C4E532] hover:bg-[#a8c428] text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm text-center transition-colors"
                   >
                     Discuss Project
                   </a>
-                  <a 
-                    href="https://github.com/ClaudiuNSL" 
-                    target="_blank" 
+                  <a
+                    href="https://github.com/ClaudiuNSL"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 border border-yellow-500/50 hover:border-yellow-400 text-yellow-400 rounded-lg text-sm transition-colors"
+                    className="px-4 py-2 border border-gray-300 hover:border-gray-400 text-gray-700 rounded-lg text-sm transition-colors"
                   >
                     GitHub
                   </a>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="text-center mt-10">
+            <a href="/projects" className="inline-flex items-center gap-2 text-gray-700 font-semibold hover:text-gray-900 transition-colors">
+              View All Projects
+              <span>&rarr;</span>
+            </a>
           </div>
         </div>
       </section>
