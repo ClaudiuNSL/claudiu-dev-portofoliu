@@ -24,7 +24,10 @@ export default function Navbar() {
             <a href="#projects" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">Projects</a>
             <a href="#contact" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">Contact</a>
             <a
-              href="#contact"
+              href="https://wa.me/40761880406"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact me on WhatsApp"
               className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-6 py-2.5 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:ring-offset-2 focus:ring-offset-slate-900"
             >
               Get in Touch
@@ -55,7 +58,7 @@ export default function Navbar() {
             <a href="#services" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
             <a href="#projects" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
             <a href="#contact" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
-            <a href="#contact" role="menuitem" className="block bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-6 py-2.5 rounded-full text-center mx-4 transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Get in Touch</a>
+            <a href="https://wa.me/40761880406" target="_blank" rel="noopener noreferrer" role="menuitem" aria-label="Contact me on WhatsApp" className="block bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-6 py-2.5 rounded-full text-center mx-4 transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Get in Touch</a>
           </div>
         )}
       </div>
