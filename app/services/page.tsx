@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Monitor, Bot, Zap, Palette } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    icon: "\u{1F4BB}",
+    icon: <Monitor className="w-8 h-8" aria-hidden="true" />,
     title: "Web Development",
     description:
       "I build modern, responsive websites and web applications using cutting-edge technologies. From landing pages to complex web platforms, I deliver clean, performant code.",
@@ -29,7 +30,7 @@ const services = [
     ],
   },
   {
-    icon: "\u{1F916}",
+    icon: <Bot className="w-8 h-8" aria-hidden="true" />,
     title: "AI Integration",
     description:
       "Enhance your applications with artificial intelligence. I integrate AI-powered features like chatbots, content generation, data analysis, and smart automation into existing or new projects.",
@@ -42,7 +43,7 @@ const services = [
     ],
   },
   {
-    icon: "\u26A1",
+    icon: <Zap className="w-8 h-8" aria-hidden="true" />,
     title: "Custom Solutions",
     description:
       "Every business is unique. I develop tailored web solutions including management systems, dashboards, e-commerce platforms, and internal tools designed specifically for your workflow.",
@@ -55,7 +56,7 @@ const services = [
     ],
   },
   {
-    icon: "\u{1F3A8}",
+    icon: <Palette className="w-8 h-8" aria-hidden="true" />,
     title: "UI/UX Design",
     description:
       "Great software starts with great design. I create intuitive, visually appealing interfaces that provide excellent user experiences while maintaining brand consistency.",
@@ -73,63 +74,63 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       <Navbar />
-    <section className="pt-24 pb-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-white mb-4">My Services</h1>
-        <p className="text-lg text-gray-300 mb-16">
-          Comprehensive web development solutions for your business
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-10"
-            >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h2 className="text-2xl font-semibold text-white mb-4">
-                {service.title}
-              </h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <p className="text-sm font-semibold text-white mb-3">
-                What&apos;s included
-              </p>
-              <ul className="space-y-2 mb-6">
-                {service.includes.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="text-[#06B6D4]">{"\u2713"}</span>
-                    <span className="text-gray-300 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="/#contact"
-                className="inline-block bg-[#06B6D4] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#0891B2] transition"
-              >
-                Get Started
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-12">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-gray-300 mb-6">
-            Let&apos;s discuss your ideas and bring them to life.
+      <main className="pt-24 pb-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h1 className="text-4xl font-bold text-white mb-4">My Services</h1>
+          <p className="text-lg text-gray-300 mb-16">
+            Comprehensive web development solutions for your business
           </p>
-          <a
-            href="/#contact"
-            className="inline-block bg-[#06B6D4] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0891B2] transition"
-          >
-            Get in Touch &rarr;
-          </a>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-10"
+              >
+                <div className="text-[#06B6D4] mb-4">{service.icon}</div>
+                <h2 className="text-2xl font-semibold text-white mb-4">
+                  {service.title}
+                </h2>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <p className="text-sm font-semibold text-white mb-3">
+                  What&apos;s included
+                </p>
+                <ul className="space-y-2 mb-6" aria-label={`${service.title} features`}>
+                  {service.includes.map((item) => (
+                    <li key={item} className="flex items-center gap-2">
+                      <span className="text-[#06B6D4]" aria-hidden="true">&#10003;</span>
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/#contact"
+                  className="inline-block bg-[#06B6D4] text-white font-semibold px-6 py-3 rounded-full hover:bg-[#0891B2] transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:ring-offset-2 focus:ring-offset-slate-900"
+                >
+                  Get Started
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <div className="text-center mt-16 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-12">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Ready to Start Your Project?
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Let&apos;s discuss your ideas and bring them to life.
+            </p>
+            <a
+              href="/#contact"
+              className="inline-block bg-[#06B6D4] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#0891B2] transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:ring-offset-2 focus:ring-offset-slate-900"
+            >
+              Get in Touch &rarr;
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </main>
       <Footer />
     </div>
   );
