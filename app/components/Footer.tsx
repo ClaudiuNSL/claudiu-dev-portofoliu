@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import NavLogo from './NavLogo';
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Column 1 — Brand */}
           <div>
-            <Image src="/logo-cc.png" alt="Comsa Claudiu" width={48} height={48} className="rounded-lg" />
+            <NavLogo />
             <p className="text-gray-400 mt-3">Comsa Claudiu</p>
             <p className="text-gray-500 text-sm mt-2">Building digital solutions that drive results.</p>
           </div>
