@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Projects | Comsa Claudiu — Web Developer",
     description:
       "Portfolio of web development projects by Comsa Claudiu.",
-    url: "https://claudiu.dev/projects",
+    url: "https://www.claudiucomsa.com/projects",
   },
 };
 

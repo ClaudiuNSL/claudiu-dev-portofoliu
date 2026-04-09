@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Services | Comsa Claudiu — Web Developer",
     description:
       "Professional web development services: React, Next.js, AI integration, custom web solutions.",
-    url: "https://claudiu.dev/services",
+    url: "https://www.claudiucomsa.com/services",
   },
 };
 

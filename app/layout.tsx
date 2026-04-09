@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "NCEWDwd-7Vx7Yti0PoIW3v4Y0xJcdN4e52PlDvW3Ipw",
+  },
   title: {
     template: "%s | Comsa Claudiu — Web Developer",
     default: "Comsa Claudiu — Web Developer & Freelancer",
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
     title: "Comsa Claudiu — Web Developer & Freelancer",
     description:
       "Programator web freelancer din Constanța, Romania. Specializat în creare site-uri și aplicații web moderne.",
-    url: "https://claudiu.dev",
+    url: "https://www.claudiucomsa.com",
     siteName: "Comsa Claudiu",
     locale: "ro_RO",
     type: "website",
@@ -50,7 +53,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://claudiu.dev",
+    canonical: "https://www.claudiucomsa.com",
   },
 };
 
@@ -61,7 +64,7 @@ const jsonLd = {
       "@type": "Person",
       name: "Comsa Claudiu",
       jobTitle: "Web Developer",
-      url: "https://claudiu.dev",
+      url: "https://www.claudiucomsa.com",
       email: "claudiucomsa29@gmail.com",
       telephone: "+40761880406",
       address: {
@@ -79,7 +82,7 @@ const jsonLd = {
       name: "Comsa Claudiu",
       description:
         "Web Developer & Freelancer specializat în creare site-uri și aplicații web moderne.",
-      url: "https://claudiu.dev",
+      url: "https://www.claudiucomsa.com",
       email: "claudiucomsa29@gmail.com",
       telephone: "+40761880406",
       address: {
