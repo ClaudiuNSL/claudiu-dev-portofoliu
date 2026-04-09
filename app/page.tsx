@@ -4,6 +4,14 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
 import ContactForm from './components/ContactForm';
+import ScrollProgress from './components/ScrollProgress';
+import AnimatedCounter from './components/AnimatedCounter';
+import TiltCard from './components/TiltCard';
+import TypeWriter from './components/TypeWriter';
+import FloatingParticles from './components/FloatingParticles';
+import TechStack from './components/TechStack';
+import MagneticButton from './components/MagneticButton';
+import TextReveal from './components/TextReveal';
 
 const serviceIcons: Record<string, React.ReactNode> = {
   'Web Development': <Monitor className="w-8 h-8" aria-hidden="true" />,
@@ -28,72 +36,86 @@ export default function Home() {
         Skip to main content
       </a>
 
+      <ScrollProgress />
       <Navbar />
 
       <main id="main-content">
         {/* Hero Section */}
-        <section id="home" aria-label="Introduction" className="min-h-screen flex items-center pt-20 px-6">
-          <div className="max-w-6xl mx-auto w-full">
+        <section id="home" aria-label="Introduction" className="min-h-screen flex items-center pt-20 px-6 relative overflow-hidden">
+          <FloatingParticles />
+          <div className="hero-glow" style={{ top: '30%', left: '20%' }} />
+          <div className="hero-glow-2" style={{ top: '60%', right: '-10%', left: 'auto' }} />
+          <div className="max-w-6xl mx-auto w-full relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <AnimatedSection direction="left">
                 <span className="inline-block bg-[#06B6D4]/20 text-white font-medium text-sm px-4 py-1.5 rounded-full mb-6 border border-[#06B6D4]/40">
-                  Web Developer & AI Enthusiast
+                  <TypeWriter words={['Web Developer & AI Enthusiast', 'Freelancer in Romania', 'React & Next.js Expert', 'Building Digital Solutions']} />
                 </span>
-                <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  Building Digital Solutions That Drive Results
+                <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                  <span className="text-white">Building Digital</span>{' '}
+                  <span className="text-gradient">Solutions That Drive Results</span>
                 </h1>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   From innovative web applications to AI-powered solutions, I provide expert development to help your business grow, scale, and thrive.
                 </p>
                 <div className="flex items-center gap-8 mb-8" aria-label="Key statistics">
                   <div>
-                    <div className="text-3xl font-bold text-white">50+</div>
+                    <div className="text-3xl font-bold text-gradient"><AnimatedCounter target={50} suffix="+" /></div>
                     <div className="text-sm text-gray-400">Expert Solutions</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-white">3+</div>
+                    <div className="text-3xl font-bold text-gradient"><AnimatedCounter target={3} suffix="+" duration={1500} /></div>
                     <div className="text-sm text-gray-400">Years Experience</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-white">100%</div>
+                    <div className="text-3xl font-bold text-gradient"><AnimatedCounter target={100} suffix="%" /></div>
                     <div className="text-sm text-gray-400">Client Dedication</div>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <a
-                    href="#projects"
-                    className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:ring-offset-2 focus:ring-offset-slate-900"
-                  >
-                    View Projects &rarr;
-                  </a>
-                  <a
-                    href="#contact"
-                    className="border-2 border-gray-600 hover:border-gray-400 text-gray-200 px-8 py-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400/50 focus:ring-offset-2 focus:ring-offset-slate-900"
-                  >
-                    Contact Me &rarr;
-                  </a>
+                  <MagneticButton>
+                    <a
+                      href="#projects"
+                      className="bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-8 py-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:ring-offset-2 focus:ring-offset-slate-900 inline-block"
+                    >
+                      View Projects &rarr;
+                    </a>
+                  </MagneticButton>
+                  <MagneticButton>
+                    <a
+                      href="#contact"
+                      className="border-2 border-gray-600 hover:border-gray-400 text-gray-200 px-8 py-3 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400/50 focus:ring-offset-2 focus:ring-offset-slate-900 inline-block"
+                    >
+                      Contact Me &rarr;
+                    </a>
+                  </MagneticButton>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection direction="right" delay={0.2}>
-                <Image
-                  src="/profil.jpg"
-                  alt="Comsa Claudiu — Web Developer"
-                  width={600}
-                  height={600}
-                  priority
-                  className="w-full h-auto rounded-2xl object-cover shadow-2xl"
-                />
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#06B6D4] to-[#38bdf8] rounded-2xl opacity-20 blur-xl" />
+                  <Image
+                    src="/profil.jpg"
+                    alt="Comsa Claudiu — Web Developer"
+                    width={600}
+                    height={600}
+                    priority
+                    className="relative w-full h-auto rounded-2xl object-cover shadow-2xl ring-1 ring-white/10"
+                  />
+                </div>
               </AnimatedSection>
             </div>
           </div>
         </section>
 
+        <div className="section-glow-line max-w-4xl mx-auto" />
+
         {/* About Section */}
         <section id="about" aria-labelledby="about-heading" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection>
-              <h2 id="about-heading" className="text-4xl font-bold text-white mb-12">About Me</h2>
+              <h2 id="about-heading" className="text-4xl font-bold mb-12"><TextReveal text="About" className="text-white" /> <TextReveal text="Me" className="text-gradient" delay={0.15} /></h2>
             </AnimatedSection>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -125,26 +147,17 @@ export default function Home() {
 
               <div className="space-y-8">
                 <AnimatedSection delay={0.15}>
-                  <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8">
-                    <h3 className="text-2xl font-semibold text-white mb-6">Skills</h3>
-                    <div className="flex flex-wrap" role="list" aria-label="Technical skills">
-                      {['React & Next.js', 'TypeScript', 'Tailwind CSS', 'AI Integration', 'Node.js & APIs', 'MongoDB', 'Git & GitHub', 'UI/UX Design'].map((skill) => (
-                        <span key={skill} role="listitem" className="inline-block px-4 py-2 rounded-full border-2 border-[#06B6D4] text-gray-200 text-sm font-medium m-1">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                  <TechStack />
                 </AnimatedSection>
 
                 <AnimatedSection delay={0.25}>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-[#06B6D4]/80 backdrop-blur-xl text-white p-6 rounded-xl text-center">
-                      <div className="text-3xl font-bold mb-1">50+</div>
+                      <div className="text-3xl font-bold mb-1"><AnimatedCounter target={50} suffix="+" /></div>
                       <div className="text-sm font-semibold">Projects</div>
                     </div>
                     <div className="bg-[#06B6D4]/80 backdrop-blur-xl text-white p-6 rounded-xl text-center">
-                      <div className="text-3xl font-bold mb-1">3+</div>
+                      <div className="text-3xl font-bold mb-1"><AnimatedCounter target={3} suffix="+" duration={1500} /></div>
                       <div className="text-sm font-semibold">Years</div>
                     </div>
                   </div>
@@ -154,11 +167,13 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-glow-line max-w-4xl mx-auto" />
+
         {/* Services Section */}
         <section id="services" aria-labelledby="services-heading" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection>
-              <h2 id="services-heading" className="text-4xl font-bold text-white mb-4">What I Offer</h2>
+              <h2 id="services-heading" className="text-4xl font-bold mb-4"><TextReveal text="What I" className="text-white" /> <TextReveal text="Offer" className="text-gradient" delay={0.1} /></h2>
               <p className="text-lg text-gray-300 mb-12">Comprehensive web development services tailored to your needs</p>
             </AnimatedSection>
 
@@ -193,11 +208,13 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-glow-line max-w-4xl mx-auto" />
+
         {/* Projects Section */}
         <section id="projects" aria-labelledby="projects-heading" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection>
-              <h2 id="projects-heading" className="text-4xl font-bold text-white mb-4">My Projects</h2>
+              <h2 id="projects-heading" className="text-4xl font-bold mb-4"><TextReveal text="My" className="text-white" /> <TextReveal text="Projects" className="text-gradient" delay={0.05} /></h2>
               <p className="text-lg text-gray-300 mb-12">Some of my recent work</p>
             </AnimatedSection>
 
@@ -229,6 +246,7 @@ export default function Home() {
                 },
               ].map((project, i) => (
                 <AnimatedSection key={project.key} delay={i * 0.15}>
+                  <TiltCard className="h-full">
                   <article className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:shadow-md hover:border-[#06B6D4]/30 transition-all h-full flex flex-col">
                     <div className="h-48 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center text-[#06B6D4]">
                       {projectIcons[project.key]}
@@ -281,6 +299,7 @@ export default function Home() {
                       </div>
                     </div>
                   </article>
+                  </TiltCard>
                 </AnimatedSection>
               ))}
             </div>
@@ -299,11 +318,13 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-glow-line max-w-4xl mx-auto" />
+
         {/* Testimonials Section */}
         <section id="testimonials" aria-labelledby="testimonials-heading" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection>
-              <h2 id="testimonials-heading" className="text-4xl font-bold text-white mb-4">What Clients Say</h2>
+              <h2 id="testimonials-heading" className="text-4xl font-bold mb-4"><TextReveal text="What Clients" className="text-white" /> <TextReveal text="Say" className="text-gradient" delay={0.1} /></h2>
               <p className="text-lg text-gray-300 mb-12">Feedback from people I&apos;ve worked with</p>
             </AnimatedSection>
 
@@ -331,11 +352,13 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="section-glow-line max-w-4xl mx-auto" />
+
         {/* Contact Section */}
         <section id="contact" aria-labelledby="contact-heading" className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
             <AnimatedSection>
-              <h2 id="contact-heading" className="text-4xl font-bold text-white mb-4">Let&apos;s Work Together</h2>
+              <h2 id="contact-heading" className="text-4xl font-bold mb-4"><TextReveal text="Let's Work" className="text-white" /> <TextReveal text="Together" className="text-gradient" delay={0.1} /></h2>
               <p className="text-lg text-gray-300 mb-12">Have a project in mind? Let&apos;s discuss how I can bring it to life!</p>
             </AnimatedSection>
 

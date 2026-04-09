@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import AccessibilityWidget from "./components/AccessibilityWidget";
+import LoadingScreen from "./components/LoadingScreen";
+import CursorGlow from "./components/CursorGlow";
+import BackToTop from "./components/BackToTop";
+import PageTransition from "./components/PageTransition";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,9 +48,18 @@ export const metadata: Metadata = {
     siteName: "Comsa Claudiu",
     locale: "ro_RO",
     type: "website",
+    images: [
+      {
+        url: "/logo-cc.png",
+        width: 1024,
+        height: 1024,
+        alt: "Comsa Claudiu — CC Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/logo-cc.png"],
   },
   robots: {
     index: true,
@@ -112,7 +125,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
+        <LoadingScreen />
+        <CursorGlow />
+        <PageTransition>
+          {children}
+        </PageTransition>
+        <BackToTop />
         <AccessibilityWidget />
       </body>
     </html>

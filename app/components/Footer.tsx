@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="bg-black/40 backdrop-blur-xl border-t border-white/10 py-12 px-6" role="contentinfo">
@@ -5,11 +7,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Column 1 — Brand */}
           <div>
-            <span className="text-3xl font-bold tracking-tight">
-              <span className="text-[#06B6D4]">C</span>
-              <span className="text-white">C</span>
-            </span>
-            <p className="text-gray-400 mt-2">Comsa Claudiu</p>
+            <Image src="/logo-cc.png" alt="Comsa Claudiu" width={48} height={48} className="rounded-lg" />
+            <p className="text-gray-400 mt-3">Comsa Claudiu</p>
             <p className="text-gray-500 text-sm mt-2">Building digital solutions that drive results.</p>
           </div>
 

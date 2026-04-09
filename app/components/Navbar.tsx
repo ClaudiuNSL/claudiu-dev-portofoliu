@@ -1,28 +1,76 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import NavLogo from './NavLogo';
+
+const sections = ['home', 'about', 'services', 'projects', 'contact'] as const;
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('home');
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+
+      let current = 'home';
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 200 && rect.top >= -rect.height + 200) {
+            current = section;
+          }
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const desktopLinkClass = (section: string) =>
+    `relative font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1 pb-1 ${
+      activeSection === section
+        ? 'text-[#06B6D4] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#06B6D4] after:rounded-full'
+        : 'text-gray-300 hover:text-white'
+    }`;
+
+  const mobileLinkClass = (section: string) =>
+    `block font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 ${
+      activeSection === section
+        ? 'text-[#06B6D4] border-l-2 border-[#06B6D4]'
+        : 'text-gray-300 hover:text-white'
+    }`;
 
   return (
-    <nav className="fixed top-0 w-full bg-white/5 backdrop-blur-md z-50 border-b border-white/20" aria-label="Main navigation">
+    <nav
+      className={`fixed top-0 w-full z-50 border-b border-white/20 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/[0.08] backdrop-blur-xl'
+          : 'bg-white/5 backdrop-blur-md'
+      }`}
+      aria-label="Main navigation"
+    >
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex justify-between items-center py-4">
-          <a href="#home" className="flex items-center focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded-lg" aria-label="Comsa Claudiu — Home">
-            <span className="text-3xl font-bold tracking-tight">
-              <span className="text-[#06B6D4]">C</span>
-              <span className="text-white">C</span>
-            </span>
-            <span className="ml-2 text-sm text-gray-400 hidden sm:block">Comsa Claudiu</span>
+        <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
+          <a href="#home" className="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded-lg pr-2" aria-label="Comsa Claudiu — Home">
+            <NavLogo />
+            <span className="text-sm text-gray-500 hidden sm:block font-medium tracking-wide group-hover:text-gray-300 transition-colors">Comsa Claudiu</span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">Home</a>
-            <a href="#about" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">About</a>
-            <a href="#services" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">Services</a>
-            <a href="#projects" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">Projects</a>
-            <a href="#contact" className="text-gray-300 hover:text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded px-1">Contact</a>
+            {sections.map((section) => (
+              <a key={section} href={`#${section}`} className={desktopLinkClass(section)}>
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            ))}
             <a
               href="https://wa.me/40761880406"
               target="_blank"
@@ -53,11 +101,11 @@ export default function Navbar() {
 
         {isMobileMenuOpen && (
           <div id="mobile-menu" className="md:hidden pb-4 space-y-2 bg-gray-900/95 backdrop-blur-xl rounded-lg p-4" role="menu">
-            <a href="#home" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Home</a>
-            <a href="#about" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-            <a href="#services" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-            <a href="#projects" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Projects</a>
-            <a href="#contact" role="menuitem" className="block text-gray-300 hover:text-white font-medium px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+            {sections.map((section) => (
+              <a key={section} href={`#${section}`} role="menuitem" className={mobileLinkClass(section)} onClick={() => setIsMobileMenuOpen(false)}>
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            ))}
             <a href="https://wa.me/40761880406" target="_blank" rel="noopener noreferrer" role="menuitem" aria-label="Contact me on WhatsApp" className="block bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-6 py-2.5 rounded-full text-center mx-4 transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50" onClick={() => setIsMobileMenuOpen(false)}>Get in Touch</a>
           </div>
         )}
