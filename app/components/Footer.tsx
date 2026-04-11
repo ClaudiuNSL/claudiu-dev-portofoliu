@@ -15,11 +15,11 @@ export default function Footer() {
           {/* Column 2 — Quick Links */}
           <nav aria-label="Footer navigation">
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
-            <a href="#home" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Home</a>
-            <a href="#about" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">About</a>
-            <a href="#services" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Services</a>
-            <a href="#projects" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Projects</a>
-            <a href="#contact" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Contact</a>
+            <a href="/#home" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Home</a>
+            <a href="/#about" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">About</a>
+            <a href="/#services" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Services</a>
+            <a href="/#projects" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Projects</a>
+            <a href="/#contact" className="text-gray-400 hover:text-[#06B6D4] transition-colors block mb-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded w-fit">Contact</a>
           </nav>
 
           {/* Column 3 — Connect */}

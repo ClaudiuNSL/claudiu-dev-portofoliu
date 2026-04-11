@@ -60,14 +60,14 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className={`flex justify-between items-center transition-all duration-300 ${scrolled ? 'py-2' : 'py-4'}`}>
-          <a href="#home" className="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded-lg pr-2" aria-label="Comsa Claudiu — Home">
+          <a href="/#home" className="group flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 rounded-lg pr-2" aria-label="Comsa Claudiu — Home">
             <NavLogo />
             <span className="text-sm text-gray-500 hidden sm:block font-medium tracking-wide group-hover:text-gray-300 transition-colors">Comsa Claudiu</span>
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
             {sections.map((section) => (
-              <a key={section} href={`#${section}`} className={desktopLinkClass(section)}>
+              <a key={section} href={`/#${section}`} className={desktopLinkClass(section)}>
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
             ))}
@@ -102,7 +102,7 @@ export default function Navbar() {
         {isMobileMenuOpen && (
           <div id="mobile-menu" className="md:hidden pb-4 space-y-2 bg-gray-900/95 backdrop-blur-xl rounded-lg p-4" role="menu">
             {sections.map((section) => (
-              <a key={section} href={`#${section}`} role="menuitem" className={mobileLinkClass(section)} onClick={() => setIsMobileMenuOpen(false)}>
+              <a key={section} href={`/#${section}`} role="menuitem" className={mobileLinkClass(section)} onClick={() => setIsMobileMenuOpen(false)}>
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </a>
             ))}
