@@ -12,6 +12,9 @@ import FloatingParticles from './components/FloatingParticles';
 import TechStack from './components/TechStack';
 import MagneticButton from './components/MagneticButton';
 import TextReveal from './components/TextReveal';
+import AuroraBackground from './components/AuroraBackground';
+import SpotlightCard from './components/SpotlightCard';
+import TestimonialsCarousel from './components/TestimonialsCarousel';
 
 const serviceIcons: Record<string, React.ReactNode> = {
   'Web Development': <Monitor className="w-8 h-8" aria-hidden="true" />,
@@ -42,9 +45,8 @@ export default function Home() {
       <main id="main-content">
         {/* Hero Section */}
         <section id="home" aria-label="Introduction" className="min-h-screen flex items-center pt-20 px-6 relative overflow-hidden">
+          <AuroraBackground />
           <FloatingParticles />
-          <div className="hero-glow" style={{ top: '30%', left: '20%' }} />
-          <div className="hero-glow-2" style={{ top: '60%', right: '-10%', left: 'auto' }} />
           <div className="max-w-6xl mx-auto w-full relative z-10">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <AnimatedSection direction="left">
@@ -185,11 +187,11 @@ export default function Home() {
                 { name: 'UI/UX Design', desc: 'Clean, modern interfaces with focus on user experience, accessibility, and visual appeal.' },
               ].map((service, i) => (
                 <AnimatedSection key={service.name} delay={i * 0.1}>
-                  <div className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 hover:shadow-md hover:border-[#06B6D4]/30 transition-all h-full">
+                  <SpotlightCard className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 hover:shadow-lg hover:shadow-cyan-500/5 hover:border-[#06B6D4]/30 transition-all h-full">
                     <div className="text-[#06B6D4] mb-4">{serviceIcons[service.name]}</div>
                     <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">{service.desc}</p>
-                  </div>
+                  </SpotlightCard>
                 </AnimatedSection>
               ))}
             </div>
@@ -328,27 +330,9 @@ export default function Home() {
               <p className="text-lg text-gray-300 mb-12">Feedback from people I&apos;ve worked with</p>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { quote: 'Claudiu built an amazing website for my business. Professional, fast, and the design exceeded my expectations. Highly recommended!', name: 'Alexandru M.', role: 'Business Owner' },
-                { quote: 'Working with Claudiu was a great experience. He understood our vision perfectly and delivered a modern, responsive web application on time.', name: 'Maria D.', role: 'Startup Founder' },
-                { quote: 'Excellent work on our company website redesign. The attention to detail and clean code quality really sets Claudiu apart from other developers.', name: 'Andrei P.', role: 'Marketing Manager' },
-              ].map((testimonial, i) => (
-                <AnimatedSection key={testimonial.name} delay={i * 0.15}>
-                  <blockquote className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-8 h-full flex flex-col">
-                    <span className="text-[#06B6D4] text-5xl font-serif leading-none" aria-hidden="true">&ldquo;</span>
-                    <p className="text-gray-300 mb-6 leading-relaxed italic flex-1">{testimonial.quote}</p>
-                    <div className="text-[#06B6D4] mb-3" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <footer>
-                      <cite className="not-italic">
-                        <div className="text-white font-semibold">{testimonial.name}</div>
-                        <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                      </cite>
-                    </footer>
-                  </blockquote>
-                </AnimatedSection>
-              ))}
-            </div>
+            <AnimatedSection delay={0.1}>
+              <TestimonialsCarousel />
+            </AnimatedSection>
           </div>
         </section>
 
