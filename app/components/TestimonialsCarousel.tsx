@@ -3,9 +3,9 @@
 import { useState, useEffect, useCallback } from 'react';
 
 const testimonials = [
-  { quote: 'Claudiu built an amazing website for my business. Professional, fast, and the design exceeded my expectations. Highly recommended!', name: 'Alexandru M.', role: 'Business Owner' },
-  { quote: 'Working with Claudiu was a great experience. He understood our vision perfectly and delivered a modern, responsive web application on time.', name: 'Maria D.', role: 'Startup Founder' },
-  { quote: 'Excellent work on our company website redesign. The attention to detail and clean code quality really sets Claudiu apart from other developers.', name: 'Andrei P.', role: 'Marketing Manager' },
+  { quote: 'Mulțumit de servicii, Profi și rapiditate.', name: 'zlat3', role: 'Google Review' },
+  { quote: 'Implicat si pasionat de site-urile care le construiește.', name: 'Banciu Costin', role: 'Google Review' },
+  { quote: 'Recomand cu încredere tuturor celor care își doresc un site de calitate, realizat cu pasiune și seriozitate. Cu siguranță voi reveni și pentru alte proiecte!', name: 'Monica Crișu', role: 'Google Review' },
 ];
 
 export default function TestimonialsCarousel() {
