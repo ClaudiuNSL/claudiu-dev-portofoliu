@@ -220,72 +220,90 @@ export default function Home() {
               <p className="text-lg text-gray-300 mb-12">Some of my recent work</p>
             </AnimatedSection>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="space-y-16">
               {[
                 {
                   key: 'Banciu Costin',
                   title: 'Banciu Costin - Professional Website',
-                  desc: 'Modern professional website with responsive design, optimized for performance and SEO.',
-                  tags: ['HTML5', 'CSS3', 'JavaScript'],
+                  desc: 'Modern professional website with responsive design, optimized for performance and SEO. Helps the client showcase the business and receive new applications and contact requests.',
+                  tech: 'HTML5, CSS3, JavaScript, Mobile responsive, SEO optimization',
+                  image: '/projects/banciu-preview.png',
                   liveUrl: 'https://www.banciucostin.ro',
                   githubUrl: 'https://github.com/ClaudiuNSL',
                 },
                 {
                   key: 'Interactive Portfolio',
                   title: 'Interactive Portfolio',
-                  desc: 'Modern personal portfolio with advanced animations and responsive design. Built with Next.js and Tailwind CSS.',
-                  tags: ['Next.js', 'Tailwind', 'TypeScript'],
+                  desc: 'Modern personal portfolio with advanced animations, 3D effects, and responsive design. Features cinematic loading screen, aurora background, and interactive components.',
+                  tech: 'Next.js, TypeScript, Tailwind CSS, Framer Motion, Three.js',
+                  image: '',
                   disabled: true,
                   githubUrl: 'https://github.com/ClaudiuNSL',
                 },
                 {
                   key: 'Custom Web Solutions',
                   title: 'Custom Web Solutions',
-                  desc: 'I develop custom web solutions for businesses: landing pages, web applications, and management systems.',
-                  tags: ['React', 'Node.js', 'MongoDB'],
+                  desc: 'I develop custom web solutions for businesses: landing pages, web applications, and management systems tailored to your specific needs.',
+                  tech: 'React, Node.js, MongoDB, REST API, Tailwind CSS',
+                  image: '',
                   contactUrl: '#contact',
                   githubUrl: 'https://github.com/ClaudiuNSL',
                 },
               ].map((project, i) => (
-                <AnimatedSection key={project.key} delay={i * 0.15}>
-                  <TiltCard className="h-full">
-                  <article className="bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden hover:shadow-md hover:border-[#06B6D4]/30 transition-all h-full flex flex-col">
-                    <div className="h-48 bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/20 flex items-center justify-center text-[#06B6D4]">
-                      {projectIcons[project.key]}
+                <AnimatedSection key={project.key} delay={i * 0.1}>
+                  <article className={`grid lg:grid-cols-2 gap-10 items-center ${i % 2 === 1 ? 'lg:direction-rtl' : ''}`}>
+                    {/* Screenshot side */}
+                    <div className={`${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+                      <div className="relative group">
+                        <div className="absolute -inset-2 bg-gradient-to-r from-[#06B6D4]/20 to-[#38bdf8]/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="relative bg-white/5 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden">
+                          {project.image ? (
+                            <Image
+                              src={project.image}
+                              alt={`${project.title} preview`}
+                              width={700}
+                              height={450}
+                              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                            />
+                          ) : (
+                            <div className="w-full aspect-[16/10] bg-gradient-to-br from-[#06B6D4]/20 to-[#0891B2]/10 flex items-center justify-center">
+                              {projectIcons[project.key]}
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
 
-                    <div className="p-6 flex flex-col flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                      <p className="text-gray-300 mb-4 text-sm">{project.desc}</p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="px-3 py-1 bg-[#06B6D4]/20 text-gray-200 text-xs rounded-full border border-[#06B6D4]/30">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="flex gap-3 mt-auto">
+                    {/* Details side */}
+                    <div className={`${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">{project.title}</h3>
+                      <p className="text-gray-300 leading-relaxed mb-6">{project.desc}</p>
+                      <p className="text-gray-400 text-sm mb-8 font-medium">{project.tech}</p>
+                      <div className="flex flex-wrap gap-3">
                         {project.liveUrl && (
                           <a
                             href={project.liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex-1 bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-4 py-2 rounded-lg text-sm text-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50"
+                            className="inline-flex items-center gap-2 bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-6 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50"
                             aria-label={`View live site: ${project.title}`}
                           >
-                            View Live
+                            <Monitor className="w-4 h-4" />
+                            Live demo
                           </a>
                         )}
                         {project.disabled && (
-                          <span className="flex-1 bg-gray-700 text-gray-400 px-4 py-2 rounded-lg text-sm text-center cursor-not-allowed" aria-label="Project is in development">
+                          <span className="inline-flex items-center gap-2 bg-gray-700 text-gray-400 px-6 py-3 rounded-lg cursor-not-allowed">
+                            <Monitor className="w-4 h-4" />
                             In Development
                           </span>
                         )}
                         {project.contactUrl && (
                           <a
                             href={project.contactUrl}
-                            className="flex-1 bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-4 py-2 rounded-lg text-sm text-center transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50"
+                            className="inline-flex items-center gap-2 bg-[#06B6D4] hover:bg-[#0891B2] text-white font-semibold px-6 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50"
                           >
+                            <Monitor className="w-4 h-4" />
                             Discuss Project
                           </a>
                         )}
@@ -293,15 +311,14 @@ export default function Home() {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="px-4 py-2 border border-gray-600 hover:border-gray-400 text-gray-200 rounded-lg text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400/50"
-                          aria-label={`View ${project.title} on GitHub`}
+                          className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-gray-200 font-semibold px-6 py-3 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400/50"
+                          aria-label={`View ${project.title} source code`}
                         >
-                          GitHub
+                          Source code
                         </a>
                       </div>
                     </div>
                   </article>
-                  </TiltCard>
                 </AnimatedSection>
               ))}
             </div>
